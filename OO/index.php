@@ -10,13 +10,13 @@ require_once ("Motorcycle.php");
 
 $ferrari = new Car("Ferrari", "Red");
 $ferrari->engine = 488;
-$ferrari->doors = 2;
+$ferrari->setDoors(2);
 
 $mustang = new Car("Mustang", "Yellow");
 $mustang->engine = 300;
-$mustang->doors = 4;
+$mustang->setDoors(4);
 
 $m = new Motorcycle("Honda", "Blue");
 $m->engine = 150;
 
-echo $m->color;
+echo $mustang->getDoors();
