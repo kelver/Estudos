@@ -6,7 +6,9 @@
  * Date: 25/02/17
  * Time: 14:41
  */
-class Vehicle
+require_once ("InterfaceVehicle.php");
+
+abstract  class Vehicle implements InterfaceVehicle
 {
     public $brand;
     public $color;
@@ -21,5 +23,12 @@ class Vehicle
     public function getEngine($type = "horsepower")
     {
         return $this->engine . " {$type}";
+    }
+
+    abstract public function getBrand();
+
+    public function getColor()
+    {
+        return $this->color;
     }
 }

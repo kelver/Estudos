@@ -14,4 +14,9 @@ class Motorcycle extends Vehicle
         parent::__construct($brand, strtoupper($color));
     }
 
+    public function getBrand()
+    {
+        return $this->brand;
+    }
+
 }
