@@ -6,15 +6,17 @@
  * Time: 13:51
  */
 require_once ("Car.php");
+require_once ("Motorcycle.php");
 
-$ferrari = new Car;
-$ferrari->brand = "Ferrari";
-$ferrari->color = "Red";
+$ferrari = new Car("Ferrari", "Red");
 $ferrari->engine = 488;
+$ferrari->doors = 2;
 
-$mustang = new Car;
-$mustang->brand = "Mustang";
-$mustang->color = "Yellow";
+$mustang = new Car("Mustang", "Yellow");
 $mustang->engine = 300;
+$mustang->doors = 4;
 
-echo $mustang->getEngine("hp");
+$m = new Motorcycle("Honda", "Blue");
+$m->engine = 150;
+
+echo $m->color;
